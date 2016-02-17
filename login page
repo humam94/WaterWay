@@ -1,0 +1,38 @@
+@@ -25,6 +25,37 @@
+  </div>
+  <div class="clear"></div>
+  <div class="workzone">
+  <form action="login2.php">
+  
+    <table>
+      <tr>
+        <td>   </td>
+		<td><b>User Name</b></td>
+        <td><FONT color="white">:</td>
+        <td><input type='text' required name='nic' size='15'></td>
+      </tr>
+      <tr>
+        <td>   </td>
+		<td><b>Password</b></td>
+        <td><font color="white">:</font></td>
+        <td><input type='password' required name='pass' size='15'></td>
+      </tr>
+      <tr>
+        <td>   </td><td><input name="button2" type="submit" value="Login" style="height:25px; width:55px"/></td>
+      </tr>
+      <tr>
+        <td>  </td>
+		<td><input name="checkbox" type="checkbox">
+            <label for="checkbox">Keep me logged in</label></td>
+      </tr>
+	  <tr>
+		<td><font color=#424242></font></td>
+		<td></td>
+		<td></td>
+	  </tr>
+      <br/>
+    </table>
+	</form>
+    <div class="workzone-left">
+      
+      
