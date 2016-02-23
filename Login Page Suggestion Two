@@ -1,0 +1,32 @@
+@@ -27,17 +27,17 @@
+  <div class="workzone">
+  <form action="login2.php">
+  
+    <table>
+    <table background="images/back.jpg" width='350' height="200" style ='border:5px solid  #2E9AFE'>
+      <tr>
+        <td>   </td>
+		<td><b>User Name</b></td>
+        <td><FONT color="white">:</td>
+		<td><b><font color='white'size='2'>User Name</font></b></td>
+        <td><FONT color="#A4A4A4">:</td>
+        <td><input type='text' required name='nic' size='15'></td>
+      </tr>
+      <tr>
+        <td>   </td>
+		<td><b>Password</b></td>
+        <td><font color="white">:</font></td>
+		<td><b><font color='white'size='2'>Password</font></b></td>
+        <td><font color="#848484">:</font></td>
+        <td><input type='password' required name='pass' size='15'></td>
+      </tr>
+      <tr>
+@@ -46,7 +46,7 @@
+      <tr>
+        <td>  </td>
+		<td><input name="checkbox" type="checkbox">
+            <label for="checkbox">Keep me logged in</label></td>
+            <label for="checkbox"><font color='white'>Keep Me Logged In</font></label></td>
+      </tr>
+	  <tr>
+		<td><font color=#424242></font></td>
