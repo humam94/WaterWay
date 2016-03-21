@@ -1,0 +1,33 @@
+@@ -0,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>WaterWay Construction - HOME</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="stylesheet/style.css" rel="stylesheet" type="text/css" /> Preview
+
+</head>
+<body>
+<div id="container">
+  <div class="header">
+    <div class="topmenu">
+      
+	  
+	  
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="banner">
+    <div class="logozone"> <h1><font color="White" size="15">WaterWay Construction</font></h1></div>
+  </div> 
+
+<?php session_start(); /* Starts the session */
+
+if(!isset($_SESSION['UserData']['Username'])){
+	header("location:login.php");
+	exit;
+}
+?>
+
+Congratulation! You have logged into password protected page. <a href="logout.php">Click here</a> to Logout.  
+</html>
