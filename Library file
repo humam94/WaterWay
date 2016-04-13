@@ -1,0 +1,15 @@
+@@ -0,0 +1,13 @@
+<?php
+
+//db properties
+
+$dbhost='localhost'; // mysql localhost name
+
+$dbuser='root'; //mysqluser
+
+$dbpass=''; //mysql password
+
+$dbname='waterway'; //your database name
+
+?>
+\ No newline at end of file
