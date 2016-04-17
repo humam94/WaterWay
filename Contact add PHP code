@@ -1,0 +1,78 @@
+@@ -5,13 +5,37 @@
+ 
+
+@$company=$_POST['company'];
+@$full_name=$_POST['first_name'];
+@$full_name=$_POST['full_name'];
+@$address=$_POST['address'];
+@$phone=$_POST['phone'];
+@$email=$_POST['email'];
+@$questions=$_POST['questions'];
+
+?>
+<?php
+
+if($company=="")
+	{
+	echo 'Add Contact Information'
+	}
+		
+else{
+$sqlstaffinsert="INSERT INTO `contact`(`company`, `full_name`, `address`, `phone`,	`email`,	`questions`) 
+				VALUES ('$company','$full_name','$address','$phone','$email','$questions')";
+
+   mysql_query($sqlstaffinsert,$conn) or die ("query failed".mysql_error());
+   
+   
+	
+	echo 'Information Added Successfully'
+	}
+
+	
+
+include ('library/closedb.php');
+
+
+?>
+<html>
+<head>
+<title>WaterWay Construction - CONTACT</title>
+@@ -49,31 +73,31 @@
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin sed odio et ante adipiscing lobortis. Quisque eleifend, arcu a dictum varius, risus neque venenatis arcu, a semper massa mi eget ipsum. </div>
+        <div> <br />
+          <h4>Contact Form:</h4>
+          <form action="" method="post" name="insert_staff">
+          <form action="contact.php" method="post" name="insert_staff">
+            <table width="97%">
+              <tr>
+                <td width="145" align="left" valign="top" class="body" name='company' id="Company"><strong>Company:</strong></td>
+                <td width="280" align="left" valign="top"><input name="Company" type="text" size="40" /></td>
+                <td width="280" align="left" valign="top"><input name="company" type="text" size="40" /></td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" class="body" name='full_name' id="Contact"><strong>Full Name:</strong></td>
+                <td align="left" valign="top"><input name="Name" type="text" size="40" /></td>
+                <td align="left" valign="top"><input name="full_name" type="text" size="40" /></td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" class="body" name='address' id="Address"><strong>Address: </strong></td>
+                <td align="left" valign="top"><input name="Address" type="text" size="40" /></td>
+                <td align="left" valign="top"><input name="address" type="text" size="40" /></td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" class="body" name='phone' id="Phone"><strong> Phone: </strong></td>
+                <td align="left" valign="top"><input name="Phone" type="text" size="40" /></td>
+                <td align="left" valign="top"><input name="phone" type="text" size="40" /></td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" class="body" name='email' id="Email"><strong> Email: </strong></td>
+                <td align="left" valign="top"><input name="Email" type="text" size="40" /></td>
+                <td align="left" valign="top"><input name="email" type="text" size="40" /></td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" class="body" name='questions' id="Comments"><strong> Questions / Comments: </strong></td>
+                <td align="left" valign="top"><textarea name="comments" cols="32" rows="6"></textarea></td>
+                <td align="left" valign="top"><textarea name="questions" cols="32" rows="6"></textarea></td>
+              </tr>
+              <tr>
+                <td></td>
