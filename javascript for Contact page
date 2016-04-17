@@ -1,0 +1,30 @@
+@@ -16,7 +16,13 @@
+
+if($company=="")
+	{
+	echo 'Add Contact Information'
+	echo '<script type="text/javascript">
+
+          window.onload = function () 
+			
+			{ alert("WELCOME TO CONTACT FORM. PLEASE FILL ALL THE FIELDS"); }
+
+		</script>'; 
+	}
+		
+else{
+@@ -27,8 +33,13 @@ $sqlstaffinsert="INSERT INTO `contact`(`company`, `full_name`, `address`, `phone
+   
+   
+	
+	echo 'Information Added Successfully'
+	}
+	echo '<script type="text/javascript">
+
+          window.onload = function () 
+			
+			{ alert("Contact Deatils Added Successfully!!"); }
+
+		</script>'; }
+
+	
