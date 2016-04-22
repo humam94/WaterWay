@@ -1,0 +1,86 @@
+@@ -1,6 +1,6 @@
+<html>
+<head>
+<title>Maaga Construction - LOGIN</title>
+<title>WaterWay Construction - LOGIN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="stylesheet/style.css" rel="stylesheet" type="text/css" />
+</head> 
+@@ -22,41 +22,25 @@
+  <div class="insidebanner">
+    <div class="logozone"> <h1><font color="White" size="15">WaterWay Construction</font></h1></div>
+  </div>
+  <div class="clear"></div>
+  <div class="workzone">
+  
+ <form action="" method="post" name="Login_Form">
+  <table width="400" border="0" align="left" cellpadding="5" cellspacing="1" class="Table">
+    <?php if(isset($msg)){?>
+    <tr>
+      <td colspan="2" align="center" valign="top"><?php echo $msg;?></td>
+    </tr>
+    <?php } ?>
+    <tr>
+      <td colspan="2" align="left" valign="top"><h3>Login</h3></td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">Username</td>
+      <td><input name="Username" type="text" class="Input"></td>
+    </tr>
+    <tr>
+      <td align="right">Password</td>
+      <td><input name="Password" type="password" class="Input"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input name="Submit" type="submit" value="Login" class="Button3"></td>
+    </tr>
+  </table>
+</form>
+	<div class="workzone-right">
+	<h1></h1>
+	</div>
+    <div class="workzone-left">
+	
+	
+   </div>	
+   <?php session_start(); /* Starts the session */
+	<div id="login">
+	<h2><span class="fontawesome-lock"></span>LOGIN</h2>
+  <form action="login.php" method="post">
+		<link href="ss.css" rel="stylesheet" type="text/css" />
+			<fieldset>
+				<p><label for="email">Username</label></p>
+				<p><input type="text" required id="email" name="Username" maxlength="10"size="10" placeholder="Username"></p> <!-- JS because of IE support; better: placeholder="mail@address.com" -->
+
+				<p><label for="password">Password</label></p>
+				<p><input type="password" id="password"  required name="Password" placeholder="*******"></p> <!-- JS because of IE support; better: placeholder="password" -->
+
+				<p><input type="submit" required name="Submit" value="LOGIN"></p>
+				<?php if(isset($msg)){?>
+		<?php echo $msg;?>
+		 <?php } ?>
+
+		 
+		 <?php session_start(); /* Starts the session */
+	
+	/* Check Login form submitted */	
+	if(isset($_POST['Submit'])){
+@@ -81,6 +65,17 @@
+		}
+	}
+?>
+			</fieldset>
+			
+
+		</form>
+	</div class="workzone-right">
+	</div>
+    <div class="workzone-left">
+	
+	
+   </div>	
+   
+      
+      
+      
