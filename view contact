@@ -1,0 +1,59 @@
+@@ -1,3 +1,9 @@
+<?php
+
+ include('library/config.php');
+ include('library/opendb.php');
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+@@ -27,5 +33,47 @@ if(!isset($_SESSION['UserData']['Username'])){
+}
+?>
+
+Congratulation! You have logged into password protected page. <a href="logout.php">Click here</a> to Logout.  
+Congratulation! You have logged into password protected page. <a href="logout.php">Click here</a> to Logout. 
+<?php 
+ $sqlselectusers="SELECT * FROM `contact`";
+
+ $resultuserall=mysql_query($sqlselectusers);
+	
+	if (!$resultuserall) 
+	{
+		echo "could not successfully run query ($sqlselectusers) from DB: ".mysql_error();
+	    echo "Please contact DB Administrator";
+		exit;
+	}
+	/*get number of records found*/
+	$num_found=mysql_num_rows($resultuserall);
+
+	/*output results as HTML table*/
+	echo "<table cellspacing='10' style='width:935px; border:1px solid  white'>\n";
+	/*output field names as table header*/
+	echo "<tr style=\"border:5px solid white\" bgcolor=\"white\"> \n";
+		for ($field=0 ; $field <mysql_num_fields($resultuserall); $field++)
+			{
+				echo "<th align=left valign=center style=\"border:2px solid black\" bgcolor=\"white\"><font color='black'>".mysql_field_name($resultuserall, $field) . "</th>\n";
+			}
+	echo "</tr>\n";
+			
+	/*output all records*/
+		for ($row=0; $row<$num_found; $row++)
+			{
+				$line=mysql_fetch_array($resultuserall,MYSQL_ASSOC);
+					echo "<tr style=\"border:2px solid  black\" bgcolor=\"black\">\n";
+						foreach ($line as $cell) 
+							echo "<td align=left valign=center style=\"border:0px solid  white\"><font color='white'> $cell</td>\n";
+					echo "</tr>\n";
+			}
+	echo "</table>\n";
+mysql_free_result($resultuserall); //free result
+
+  
+
+
+include ("library/closedb.php");
+ 
+?> 
+</html>
