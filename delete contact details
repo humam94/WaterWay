@@ -1,0 +1,21 @@
+<?php
+
+ include('library/config.php');
+ include('library/opendb.php');
+
+ @$email=$_POST['email'];
+
+
+?>
+<?php
+  
+ $sqlselectusers="DELETE FROM `contact` WHERE `email`='$email'";
+
+ $resultuserall=mysql_query($sqlselectusers);
+
+include ("library/closedb.php");
+ 
+?>
+
+			 
+           
